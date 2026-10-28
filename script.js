@@ -59,7 +59,6 @@ dots.forEach((dot, index) => {
     startAutoplay();
   });
 });
-
 hero.addEventListener("mouseenter", stopAutoplay);
 hero.addEventListener("mouseleave", startAutoplay);
 hero.addEventListener("focusin", stopAutoplay);

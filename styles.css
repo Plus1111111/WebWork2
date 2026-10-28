@@ -289,7 +289,6 @@ button { color: inherit; font: inherit; }
   .site-footer > p { grid-column: 1 / -1; grid-row: 2; margin: 0; text-align: left; }
 }
 
-/* 尊重访客系统中的减少动态效果偏好 */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
