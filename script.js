@@ -42,7 +42,7 @@ function startAutoplay() {
     autoplayTimer = window.setInterval(() => showSlide(activeSlideIndex + 1), 6000);
   }
 }
-
+// 初始化显示第一张幻灯片
 previousButton.addEventListener("click", () => {
   showSlide(activeSlideIndex - 1);
   startAutoplay();

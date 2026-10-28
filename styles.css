@@ -288,7 +288,7 @@ button { color: inherit; font: inherit; }
   .site-footer { min-height: 190px; grid-template-columns: 1fr 1fr; gap: 17px; padding: 33px 6%; }
   .site-footer > p { grid-column: 1 / -1; grid-row: 2; margin: 0; text-align: left; }
 }
-
+// 减少动画与滚动行为以适应用户偏好
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
