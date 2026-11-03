@@ -22,7 +22,6 @@ function showSlide(index) {
   dots.forEach((dot, dotIndex) => {
     const isActive = dotIndex === activeSlideIndex;
     dot.classList.toggle("is-active", isActive);
-
     if (isActive) {
       dot.setAttribute("aria-current", "true");
     } else {
@@ -39,14 +38,11 @@ function stopAutoplay() {
 
 function startAutoplay() {
   stopAutoplay();
-
   if (!reduceMotion.matches) {
-    autoplayTimer = window.setInterval(() => {
-      showSlide(activeSlideIndex + 1);
-    }, 6000);
+    autoplayTimer = window.setInterval(() => showSlide(activeSlideIndex + 1), 6000);
   }
 }
-
+// 初始化显示第一张幻灯片
 previousButton.addEventListener("click", () => {
   showSlide(activeSlideIndex - 1);
   startAutoplay();
@@ -63,7 +59,6 @@ dots.forEach((dot, index) => {
     startAutoplay();
   });
 });
-
 hero.addEventListener("mouseenter", stopAutoplay);
 hero.addEventListener("mouseleave", startAutoplay);
 hero.addEventListener("focusin", stopAutoplay);
